@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary-color: #3498db;
-    --primary-dark: #2980b9;
-    --primary-light: #85c1e9;
-    --primary-lighter: #ebf5fb;
+    --primary-color: #0000FF;
+    --primary-dark: #0000CC;
+    --primary-light: #6666FF;
+    --primary-lighter: #E6E6FF;
     --text-dark: #2c3e50;
     --text-light: #6c757d;
     --background-light: #f8f9fa;
