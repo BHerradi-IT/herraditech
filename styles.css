@@ -54,8 +54,9 @@ body {
 }
 
 .nav-brand img {
-    height: 50px;
+    height: 40px; /* Smaller height for logo */
     width: auto;
+    max-width: 100%; /* Ensure it scales down */
 }
 
 .nav-brand h1 {
@@ -498,6 +499,85 @@ body {
         flex-direction: column;
         background-color: var(--secondary-color);
         width: 100%;
+        height: calc(100% - 70px);
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 20px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        padding: 15px 0;
+        width: 80%;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-item h3 {
+        margin-top: 10px;
+    }
+
+    .suggestions-form {
+        padding: 2rem;
+    }
+
+    .service-detail-content {
+        padding: 2rem;
+    }
+
+    .service-detail-title {
+        font-size: 2rem;
+    }
+
+    .service-detail-description {
+        font-size: 1rem;
+    }
+
+    .service-detail-features li {
+        font-size: 1rem;
+    }
         text-align: center;
         transition: 0.3s;
         box-shadow: var(--shadow);
