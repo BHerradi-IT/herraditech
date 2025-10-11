@@ -116,7 +116,7 @@ body {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    color: var(--secondary-color);
+    color: #ffffff; /* White text for hero section */
     padding: 100px 0;
     text-align: center;
 }
@@ -158,7 +158,7 @@ body {
 
 .btn-primary:hover {
     background-color: var(--primary-dark);
-    color: var(--secondary-color);
+    color: #ffffff; /* White text for hero section */
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
@@ -464,7 +464,7 @@ body {
     margin-top: 2rem;
     padding: 12px 30px;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: #ffffff; /* White text for hero section */
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
@@ -480,7 +480,7 @@ body {
 /* Footer */
 .footer {
     background-color: var(--text-dark);
-    color: var(--secondary-color);
+    color: #ffffff; /* White text for hero section */
     padding: 2rem 0;
     text-align: center;
 }
