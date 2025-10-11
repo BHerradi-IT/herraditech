@@ -22,7 +22,7 @@ body {
     font-family: 'Cairo', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--secondary-color);
+    background-color: var(--background-light);
 }
 
 .container {
@@ -33,7 +33,7 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background-color: var(--secondary-color);
+    background-color: var(--background-light);
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
@@ -50,13 +50,7 @@ body {
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Reduced gap after removing logo */
-}
-
-.nav-brand img {
-    height: 40px; /* Smaller height for logo */
-    width: auto;
-    max-width: 100%; /* Ensure it scales down */
+    gap: 0.5rem;
 }
 
 .nav-brand h1 {
@@ -153,7 +147,7 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--secondary-color);
+    background-color: var(--background-light);
     color: var(--primary-color);
 }
 
@@ -194,49 +188,76 @@ body {
 }
 
 .service-card {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color); /* Green background for service cards */
     padding: 2rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     text-align: center;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Ensure consistent height */
 }
 
 .service-card:hover {
+    background-color: #ffffff; /* White background on hover */
     transform: translateY(-10px);
     box-shadow: var(--shadow-hover);
     border: 2px solid var(--primary-light);
 }
 
-.service-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
 .service-card h3 {
-    color: var(--primary-color);
+    color: #ffffff; /* White text for service card titles */
     font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     font-weight: 700;
 }
 
-.service-card p {
-    color: var(--text-light);
-    line-height: 1.8;
-    font-size: 0.95rem;
+.service-card:hover h3 {
+    color: var(--primary-color); /* Green text on hover */
 }
 
 .service-card a {
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* White icon color */
+}
+
+.service-card:hover .service-icon {
+    color: var(--primary-color); /* Green icon on hover */
+}
+
+.service-logo {
+    max-width: 100px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 0.5rem;
+    background-color: #ffffff; /* White background for logos */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.service-card:hover .service-logo {
+    background-color: var(--primary-lighter); /* Lighter green background on hover */
 }
 
 /* About Section */
 .about {
     padding: 80px 0;
-    background-color: var(--secondary-color);
+    background-color: var(--background-light);
 }
 
 .about-content {
@@ -266,7 +287,7 @@ body {
 }
 
 .testimonial-card {
-    background-color: var(--secondary-color);
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
@@ -293,7 +314,7 @@ body {
 }
 
 .suggestions-form {
-    background-color: var(--secondary-color);
+    background-color: #ffffff;
     padding: 3rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
@@ -312,7 +333,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 80px 0;
-    background-color: var(--secondary-color);
+    background-color: var(--background-light);
 }
 
 .contact-content {
@@ -333,12 +354,13 @@ body {
     align-items: center;
     gap: 1.5rem;
     padding: 1.5rem;
-    background-color: var(--background-light);
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
 .contact-icon {
     font-size: 2.5rem;
+    color: var(--primary-color);
 }
 
 .contact-item h3 {
@@ -393,7 +415,7 @@ body {
 .service-detail-content {
     max-width: 900px;
     margin: 0 auto;
-    background-color: var(--secondary-color);
+    background-color: #ffffff;
     padding: 3rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
@@ -409,6 +431,7 @@ body {
 .service-detail-icon {
     font-size: 4rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 .service-detail-title {
@@ -497,7 +520,7 @@ body {
         right: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: var(--secondary-color);
+        background-color: var(--background-light);
         width: 100%;
         height: calc(100% - 70px);
         justify-content: flex-start;
@@ -578,76 +601,4 @@ body {
     .service-detail-features li {
         font-size: 1rem;
     }
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: var(--shadow);
-        padding: 2rem 0;
-    }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-description {
-        font-size: 1rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-
-    .suggestions-form {
-        padding: 2rem 1.5rem;
-    }
-
-    .service-detail-content {
-        padding: 2rem 1.5rem;
-    }
-
-    .service-detail-title {
-        font-size: 2rem;
-    }
 }
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 1.5rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .nav-brand h1 {
-        font-size: 1.5rem;
-    }
-
-    .nav-brand img {
-        height: 40px;
-    }
-
-    .service-detail-title {
-        font-size: 1.8rem;
-    }
-}
-
